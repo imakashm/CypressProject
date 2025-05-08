@@ -2,7 +2,7 @@ describe('Demo Project', () => {
 // Positive test case - Login with valid credentials
 it('Login with valid credentials', () => {
     cy.fixture('TestLogin.json').then((Data) => {
-      cy.visit('https://saucedemo.com/')
+      cy.visit('https://saucedemo.com/') //Demo Url
       cy.contains('Swag Labs').should('be.visible')
       cy.get('[data-test="username"]').type(Data.valid.username)
       cy.get('[data-test="password"]').type(Data.valid.password) 
