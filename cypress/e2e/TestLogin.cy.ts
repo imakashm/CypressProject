@@ -39,7 +39,7 @@ it('Login with valid credentials', () => {
   // Negative test case - Login with invalid username
   it('Login with invalid username', () => {
     cy.fixture('TestLogin.json').then((Data) => {
-      cy.visit('https://saucedemo.com/')
+      cy.visit('https://saucedemo.com/') //Demo Url
       cy.get('[data-test="username"]').type(Data.invalid.username) // Invalid username
       cy.get('[data-test="password"]').type(Data.valid.password) // Correct password
       cy.get('[data-test="login-button"]').click()
